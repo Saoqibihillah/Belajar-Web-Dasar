@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <title>Detail Karyawan</title>
+</head>
+<body>
+    <h1>Sistem Informasi Penggajian</h1>
+    <div id="detail_karyawan">
+        <p>Selamat Datang di Perusahaan Innovative Technology.
+            
+Innovative Technology adalah perusahaan teknologi yang berfokus pada pengembangan dan penerapan teknologi inovatif untuk berbagai industri. Perusahaan didirikan pada tahun 2000 oleh sekelompok insinyur dan pengusaha yang memiliki visi untuk menciptakan dunia yang lebih baik melalui teknologi.
+        </p>
+    </div>
+
+    <script>
+        // Ambil ID karyawan dari parameter URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const karyawanId = urlParams.get('id');
+
+        // Contoh data karyawan (biasanya akan diambil dari server atau database)
+        const karyawanData = {
+            1: { nama: 'Arif', posisi: 'Specialis IT', gaji: 7500000, mulai_bekerja: '2012-05-15' },
+            2: { nama: 'Mario', posisi: 'Manager', gaji: 6000000, mulai_bekerja: '2020-03-10' },
+            3: { nama: 'Aura', posisi: 'Akunting', gaji: 6000000, mulai_bekerja: '2019-12-01' }
+        };
+
+        if (karyawanData[karyawanId]) {
+            const detailKaryawan = karyawanData[karyawanId];
+            const detailKaryawanHtml = `
+                <p>Nama: ${detailKaryawan.nama}</p>
+                <p>Posisi: ${detailKaryawan.posisi}</p>
+                <p>Gaji: ${detailKaryawan.gaji}</p>
+                <p>Lama Bekerja: ${hitungLamaBekerja(detailKaryawan.mulai_bekerja)} tahun</p>
+            `;
+            document.getElementById('detail_karyawan').innerHTML = detailKaryawanHtml;
+        }
+
+        // Fungsi untuk menghitung lama bekerja
+        function hitungLamaBekerja(tanggalMulai) {
+            const tanggalMulaiKerja = new Date(tanggalMulai);
+            const tanggalHariIni = new Date();
+            const selisihTahun = tanggalHariIni.getFullYear() - tanggalMulaiKerja.getFullYear();
+
+            return selisihTahun;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Daftar Karyawan</title>
+    <style>
+        body {
+            background-color: rgb(255, 255, 255); /* Warna biru sebagai latar belakang */
+        }
+        h1 {
+            color: rgb(0, 0, 0); /* Warna teks putih agar terlihat dengan latar belakang biru */
+        }
+    </style>
+</head>
+<body>
+    <h1>Daftar Karyawan</h1>
+    <ul>
+        <li><a href="javascript:void(0);" onclick="tampilkanDetailKaryawan(4)">about</a></li>
+        <li><a href="javascript:void(0);" onclick="tampilkanDetailKaryawan(1)">Specialis IT</a></li>
+        <li><a href="javascript:void(0);" onclick="tampilkanDetailKaryawan(2)">Manager</a></li>
+        <li><a href="javascript:void(0);" onclick="tampilkanDetailKaryawan(3)">Akunting</a></li>
+        <!-- Tambahkan daftar karyawan lainnya sesuai kebutuhan -->
+    </ul>
+
+    <script>
+        function tampilkanDetailKaryawan(id) {
+            parent.frames['detail_karyawan'].location.href = 'detail_karyawan.html?id=' + id;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>M.Syaoqibihillah_478 Tugas P6</title>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        img {
+            width: 125x;
+            height: 125px;
+            float: left;
+            object-fit: cover;
+        }
+
+        h1, h2 {
+            text-align: center;
+        }
+
+        hr {
+            height: 1px;
+            background-color: black;
+            width: 100%;
+        }
+
+        .container {
+            display: flex;
+            justify-content: left;
+        }
+
+        .form-container {
+            text-align: left;
+        }
+
+        .button {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <img src="Logo unindra.png">
+    <h1>PERPUSTAKAAN<br>Universitas Indraprasta<br>PGRI<br></h1>
+    <hr>
+    <h2>Formulir Registrasi Anggota</h2>
+
+    <div class="container">
+        <form class="form-container">
+            <table>
+                <tr>
+                    <td>Isikan Data Diri Anda:</td>
+                </tr>
+
+                <tr>
+                    <td>Nama:</td>
+                    <td><input type="text" name="name" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td>Jenis Kelamin:</td>
+                    <td>
+                        <input type="radio" name="gender" value="Laki-laki" id="pilihan1">
+                        <label for="pilihan1">Laki-laki</label>
+                        <input type="radio" name="gender" value="Perempuan" id="pilihan2">
+                        <label for="pilihan2">Perempuan</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Tempat, Tanggal Lahir:</td>
+                    <td><input type="text" name="birth" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td>NPM:</td>
+                    <td><input type="text" name="npm" size="20"></td>
+                </tr>
+
+                <tr>
+                    <td>Fakultas:</td>
+                    <td>
+                        <input type="radio" name="faculty" value="FTMIPA" id="FTMIPA">
+                        <label for="FTMIPA">FTMIPA</label>
+                        <input type="radio" name="faculty" value="FIPPS" id="FIPPS">
+                        <label for="FIPPS">FIPPS</label>
+                        <input type="radio" name="faculty" value="FBS" id="FBS">
+                        <label for="FBS">FBS</label>
+                        <input type="radio" name="faculty" value="PASCA SARJANA" id="PASCA SARJANA">
+                        <label for="PASCA SARJANA">PASCA SARJANA</label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Program Studi:</td>
+                    <td>
+                        <select name="study_program">
+                            <option>Informatika</option>
+                            <option>Teknik Industri</option>
+                            <option>Pendidikan Biologi</option>
+                            <option>Pendidikan Matematika</option>
+                            <option>Pendidikan Fisika</option>
+                            <option>Pendidikan Sejarah</option>
+                            <option>Pendidikan Bahasa Indonesia</option>
+                            <option>Pendidikan Bahasa Inggris</option>
+                        </select>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Kategori Buku:</td>
+                    <td>
+                        <input type="checkbox" name="book_category" value="Pendidikan">Pendidikan<br>
+                        <input type="checkbox" name="book_category" value="Ilmu Sosial">Ilmu Sosial<br>
+                        <input type="checkbox" name="book_category" value="Ilmu Alam">Ilmu Alam<br>
+                        <input type="checkbox" name="book_category" value="Agama">Agama<br>
+                        <input type="checkbox" name="book_category" value="Budaya">Budaya<br>
+                        <input type="checkbox" name="book_category" value="Matematika & Sains">Matematika & Sains<br>
+                    </td>
+                </tr>
+            </table>
+            <div class="button">
+                <button id="Daftar">Daftar</button>
+                <button id="MuatUlang">Muat Ulang</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
