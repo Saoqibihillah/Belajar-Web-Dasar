@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Gaji Karyawan</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #ffffff;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        #calculator-container {
+            background-color: #97b5f7;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #000000;
+            text-align: left;
+            padding: 10px;
+        }
+
+        th {
+            background-color: #ffffff;
+        }
+
+        input {
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+
+        button {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<div id="calculator-container">
+    <h2>Kalkulator Gaji Karyawan</h2>
+
+    <!-- Form Input -->
+    <div>
+        <label>This Page says</label><br>
+        <label>Masukkan Jam Kerja Perminggu</label><br>
+        <input type="number" id="jumlahJamKerja" placeholder="Contoh: 45"><br>
+        <label>Masukkan Tarif Per Jam</label><br>
+        <input type="number" id="tarifPerJam" placeholder="Contoh: 50000"><br>
+        <button onclick="hitungGaji()">Hitung Gaji</button>
+        <button onclick="cancel()">Batal</button>
+    </div>
+
+    <!-- Output Tabel -->
+    <div id="output">
+        <p id="incomeMessage" style="font-weight: bold; font-size: 18px; margin-top: 20px;"></p>
+        <!-- Tabel Output -->
+        <table id="outputTable">
+            <!-- Tabel akan diisi melalui JavaScript -->
+        </table>
+    </div>
+</div>
+
+<script>
+    function hitungGaji() {
+        // Mendapatkan nilai input dari pengguna
+        var jumlahJamKerja = parseFloat(document.getElementById("jumlahJamKerja").value);
+        var tarifPerJam = parseFloat(document.getElementById("tarifPerJam").value);
+
+        // Menghitung gaji berdasarkan rumus
+        var gaji;
+        if (jumlahJamKerja > 40) {
+            gaji = (jumlahJamKerja - 40) * 0.5 * tarifPerJam;
+        } else {
+            gaji = jumlahJamKerja * tarifPerJam;
+        }
+
+        // Menampilkan hasil dalam tabel
+        var outputTable = "<table>";
+        outputTable += "<tr><th>Inputan</th><th>Output</th></tr>";
+        outputTable += "<tr><td>Jumlah Jam Kerja</td><td>" + jumlahJamKerja + " Jam</td></tr>";
+        outputTable += "<tr><td>Tarif Per Jam</td><td>Rp. " + tarifPerJam + "</td></tr>";
+        outputTable += "<tr><td colspan='2' style='text-align:center;'>Gaji Karyawan: Rp. " + gaji.toFixed(2) + "</td></tr>";
+        outputTable += "<tr><td colspan='2' style='text-align:center;'>Ini Adalah Pendapatan Anda Perbulan !!!</td></tr>";
+        outputTable += "</table>";
+
+        // Menampilkan output dalam div dengan id "output"
+        document.getElementById("output").innerHTML = outputTable;
+
+        // Menampilkan pesan pendapatan bulanan
+        document.getElementById("incomeMessage").innerHTML = "Ini Adalah Pendapatan Anda Perbulan !!!";
+    }
+
+    function cancel() {
+        // Fungsi untuk membatalkan
+        console.log("Batal button clicked");
+
+        // Menghapus pesan pendapatan bulanan saat dibatalkan
+        document.getElementById("incomeMessage").innerHTML = "";
+        // Menghapus tabel hasil kalkulasi saat dibatalkan
+        document.getElementById("output").innerHTML = "";
+    }
+</script>
+
+</body>
+</html>

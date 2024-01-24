@@ -1,0 +1,50 @@
+/* biodata.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+}
+
+.biodata-container {
+    width: 50%;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.biodata-container h1 {
+    color: #333;
+}
+
+.biodata-container hr {
+    border-top: 1px solid #ddd;
+    margin: 10px 0;
+}
+
+.biodata-container img {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 0px;
+}
+
+.biodata-container p {
+    text-align: left;
+    margin-bottom: 0px;
+}
+
+.biodata-container .barcode-info {
+    position: absolute;
+    top: 0px;
+    right: 10px;
+    text-align: center;
+}
+
+.biodata-container .barcode-info p {
+    font-size: 12px;
+    color: #000000;
+}

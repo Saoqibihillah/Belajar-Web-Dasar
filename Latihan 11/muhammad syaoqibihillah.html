@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Syaoqibihillah</title>
+    <style>
+        #hr {
+            border: 3px solid rgb(9, 45, 154);
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            margin: 0 auto;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .text-left {
+            text-align: left;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .button-submit-reset {
+            width: 200px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div id="container" class="container">
+        <table border="0">
+            <tr>
+                <td align="right"><img src="Logo Unindra.png" class="float-right"></td>
+                <td align="center">
+                    <h1> UNIVERSITAS INDRAPRASTA PGRI<br> (UNINDRA)<br><br>
+                    <h2> Jl. Nangka Raya No.58 C, RT.5/RW.5, Tj. Bar., Kec. Jagakarsa, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12530 </h2>
+                </td>
+            </tr>
+        </table>
+
+        <hr id="hr" class="hr">
+
+        <h1 class="text-center">BIODATA MAHASISWA</h1>
+        <table border="0">
+            <tr>
+                <td class="text-left" colspan="3">Nama</td>
+                <td><input type="text" class="form-control" id="nama"></td>
+            </tr>
+            <tr>
+                <td class="text-left" colspan="3">Alamat</td>
+                <td><input type="text" class="form-control" id="alamat"></td>
+            </tr>
+            <tr>
+                <td class="text-left" colspan="3">Tanggal Lahir</td>
+                <td><input type="date" name="date" id="date" class="form-control"></td>
+            </tr>
+            <tr>
+                <td class="text-left" colspan="3">No. Telp</td>
+                <td><input type="text" class="form-control" id="noTelp"></td>
+            </tr>
+            <tr>
+                <td class="text-left" colspan="3">Email</td>
+                <td><input type="text" class="form-control" id="email"></td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: right;">
+                    <div class="button-submit-reset">
+                        <input type="submit" value="Simpan" class="btn btn-primary">
+                        <input type="reset" value="Batal" class="btn btn-danger">
+                    </div>
+                </td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Dosen</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        .form-table {
+            width: 50%;
+        }
+        th {
+            background-color: black;
+            color: red;
+        }
+        td {
+            background-color: white;
+            color: black;
+        }
+        input[type="submit"] {
+            background-color: green;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+        }
+        tr:hover {
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Input Data Dosen</h1>
+        <form id="dosenForm" class="form-table">
+            <table>
+                <tr>
+                    <td><label for="nidn">NIDN:</label></td>
+                    <td><input type="text" id="nidn" name="nidn" size="40"></td>
+                </tr>
+                <tr>
+                    <td><label for="nama">Nama:</label></td>
+                    <td><input type="text" id="nama" name="nama" size="40"></td>
+                </tr>
+                <tr>
+                    <td><label for="alamat">Alamat:</label></td>
+                    <td><textarea rows="3" cols="40" id="alamat" name="alamat"></textarea></td>
+                </tr>
+            </table>
+            <br>
+            <input type="button" value="Submit" onclick="submitDosen()" style="background-color: green; color: white;">
+        </form>
+    
+        <h2>Data Dosen</h2>
+        <table id="tableDosen" border="1" cellpadding="5" cellspacing="5">
+            <thead>
+                <tr>
+                    <th colspan="3" style="background-color: black; color: red">NIDN</th>
+                </tr>
+                <tr>
+                    <th style="background-color: black; color: red" id="nidn_part1"></th>
+                    <th style="background-color: blue; color: yellow" id="nidn_part2"></th>
+                    <th style="background-color: black; color: green" id="nidn_part3"></th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="background-color: black; color: red">NAMA</th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="background-color: black; color: red" id="nama_result"></th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="background-color: black; color: red">ALAMAT</th>
+                </tr>
+                <tr>
+                    <th colspan="5" style="background-color: black; color: red" id="alamat_result"></th>
+                </tr>
+            </thead>
+        </table>
+    </center>
+</body>
+</html>

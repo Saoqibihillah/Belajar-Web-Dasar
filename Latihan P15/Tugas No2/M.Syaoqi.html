@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Syaoqibihillah</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body> 
+     <img src="abc.jpeg" alt="Top Right Image" class="top-right-image">
+     <img src="Logo unindra.png" alt="Top Left Image" class="top-left-image">
+    <div class="container">
+      
+        <h1>Hitung Biaya Semen</h1>
+        
+        <!-- Container untuk label dan input -->
+        <div class="input-container">
+            <label for="inputMerk">Merk Semen:</label>
+            <input type="text" id="inputMerk">
+
+            <label for="inputHargaPerSak">Harga per Sak:</label>
+            <input type="text" id="inputHargaPerSak">
+
+            <label for="inputJumlahPembelian">Jumlah Pembelian:</label>
+            <input type="text" id="inputJumlahPembelian">
+        </div>
+        
+        <!-- Container untuk tombol Hitung dan Reset -->
+        <div class="buttons-container">
+            <button onclick="hitungBiaya()">Hitung</button>
+            <button onclick="resetInput()">Reset</button>
+        </div>
+
+        <!-- Output Containers -->
+        <div class="output-container">
+            <div class="output-label"></div>
+            <div id="outputDiskon" class="output"></div>
+        </div>
+
+        <div class="output-container">
+            <div class="output-label"></div>
+            <div id="outputMerk" class="output"></div>
+        </div>
+
+        <div class="output-container">
+            <div class="output-label"></div>
+            <div id="outputJumlahPembelian" class="output"></div>
+        </div>
+
+        <div class="output-container">
+            <div class="output-label"></div>
+            <div id="outputTotalBiaya" class="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

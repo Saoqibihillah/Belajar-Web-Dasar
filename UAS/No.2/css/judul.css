@@ -1,0 +1,36 @@
+body{
+    background-color: rgb(167, 248, 248);
+}
+
+img{
+    float: left;
+    margin-left: 10%;
+}
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+}
+
+.kotak-data {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px auto;
+    width: 50%; /* Sesuaikan lebar sesuai kebutuhan */
+}
+
+.kotak-data > a {
+    display: block;
+    text-decoration: none;
+    background-color: rgb(253, 7, 7);
+    color: rgb(255, 255, 255);
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,81 @@
+body {
+    font-family: 'Times new roman', fantasy;
+    background-color: #b5ffd3;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #bbbbbb;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left; /* Menengahkan elemen di dalam container */
+    position: relative; /* Relative positioning for absolute positioning of images */
+}
+
+.image-left,
+.image-right {
+    width: 110px; /* Adjust the width as needed */
+    height: auto;
+    position: absolute;
+    top: 10px; /* Adjust the top value for better positioning */
+    border-radius: 50%; /* Create a circular shape */
+}
+
+.image-left {
+    left: 10px;
+}
+
+.image-right {
+    right: 10px;
+}
+
+h1 {
+    text-align: center;
+    color: #000000;
+}
+
+label {
+    display: block;
+    margin: 10px 0;
+    color: #000000;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+button {
+    background-color: #ebbdfc;
+    color: rgb(0, 0, 0);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 0 10px; /* Menambahkan margin agar tombol tidak menumpuk */
+}
+
+button:hover {
+    background-color: #a0fbbd;
+}
+
+#outputDeterminan,
+#outputKeterangan {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #000000;
+    background-color: #fff;
+    color: #000000;
+}

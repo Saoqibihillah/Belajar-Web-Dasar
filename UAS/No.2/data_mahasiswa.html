@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Mahasiswa</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid rgb(0, 0, 0);
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: center;
+        }
+        .form-table {
+            width: 50%;
+        }
+        th {
+            background-color: black;
+            color: red;
+        }
+        td {
+            background-color: white;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <center>
+    <h2>Formulir Input Data Mahasiswa</h2>
+    <form id="mahasiswaForm" class="form-table">
+        <table>
+            <tr>
+                <td><label for="npm">NPM:</label></td>
+                <td><input type="text" id="npm" name="npm" size="40"></td>
+            </tr>
+            <tr>
+                <td><label for="nama">Nama:</label></td>
+                <td><input type="text" id="nama" name="nama" size="40"></td>
+            </tr>
+            <tr>
+                <td><label for="alamat">Alamat:</label></td>
+                <td><textarea rows="3" cols="40" id="alamat" name="alamat"></textarea></td>
+            </tr>
+        </table>
+        <br>
+        <input type="button" value="Submit" onclick="tampilkanDataMahasiswa()" style="background-color: green; color: white;">
+    </form>
+   
+    <h2>Data Mahasiswa</h2>
+    <table id="data_mahasiswa" border="1" cellpadding="10" cellspacing="3">
+        <thead>
+          <tr>
+            <th colspan="3" style="background-color: black; color: red">NPM</th>
+          </tr>
+          <tr>
+            <th style="background-color: black; color: red" id="npm_part1"></th>
+            <th style="background-color: blue; color: yellow" id="npm_part2"></th>
+            <th style="background-color: black; color: green" id="npm_part3"></th>
+          </tr>
+          <tr>
+            <th colspan="3" style="background-color: black; color: red">NAMA</th>
+          </tr>
+          <tr>
+            <th colspan="3" style="background-color: black; color: red" id="nama_result"></th>
+          </tr>
+          <tr>
+            <th colspan="3" style="background-color: black; color: red">ALAMAT</th>
+          </tr>
+          <tr>
+            <th colspan="3" style="background-color: black; color: red" id="alamat_result"></th>
+          </tr>
+        </thead>
+    </table>
+    </center>
+
+
+    <script>
+        function tampilkanDataMahasiswa() {
+            const npm = document.getElementById("npm").value;
+            const nama = document.getElementById("nama").value;
+            const alamat = document.getElementById("alamat").value;
+
+            // Parsing NPM into three parts
+            const npmParts = npm.match(/(\d{4})\s*(\d{3})\s*(\d{5})/);
+            const npmPart1 = npmParts[1];
+            const npmPart2 = npmParts[2];
+            const npmPart3 = npmParts[3];
+
+            // Displaying NPM parts
+            document.getElementById("npm_part1").innerHTML = npmPart1;
+            document.getElementById("npm_part2").innerHTML = npmPart2;
+            document.getElementById("npm_part3").innerHTML = npmPart3;
+
+            // Displaying NAMA
+            document.getElementById("nama_result").innerHTML = nama;
+
+            // Displaying ALAMAT
+            document.getElementById("alamat_result").innerHTML = alamat;
+
+            // Reset formulir setelah menambahkan data
+            document.getElementById("mahasiswaForm").reset();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Muhammad Syaoqibihillah</title>
+    <style>
+        table {
+            width: 100%;
+        }
+        table, th, td {
+            border: 1px solid rgb(32, 110, 212);
+            border-collapse: collapse;
+            padding: 10px;
+            text-align: left;
+        }
+        .form-table {
+            width: 50%;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulir Reservasi Hotel</h2>
+    <form id="reservasiForm" class="form-table">
+        <table>
+            <tr>
+                <td><label for="nama">Nama:</label></td>
+                <td><input type="text" id="nama" name="nama" size="40"></td>
+            </tr>
+            <tr>
+                <td><label for="nomer_telpon">Nomer Telpon:</label></td>
+                <td><input type="tel" id="nomer_telpon" name="nomer_telpon" size="20"></td>
+            </tr>
+            <tr>
+                <td><label for="alamat">Alamat:</label></td>
+                <td><input type="text" id="alamat" name="alamat" size="40"></td>
+            </tr>
+            <tr>
+                <td><label for="check_in">Tanggal Check-In:</label></td>
+                <td><input type="date" id="check_in" name="check_in"></td>
+            </tr>
+            <tr>
+                <td><label for="check_out">Tanggal Check-Out:</label></td>
+                <td><input type="date" id="check_out" name="check_out"></td>
+            </tr>
+            <tr>
+                <td><label for="jenis_kamar">Jenis Kamar:</label></td>
+                <td>
+                    <select id="jenis_kamar" name="jenis_kamar">
+                        <option value="singel">Singel</option>
+                        <option value="standar">Standar</option>
+                        <option value="deluxe">Deluxe</option>
+                        <option value="suite">Suite</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="jumlah_dewasa">Jumlah Tamu Dewasa:</label></td>
+                <td><input type="number" id="jumlah_dewasa" name="jumlah_dewasa"></td>
+            </tr>
+            <tr>
+                <td><label for="jumlah_anak">Jumlah Anak-anak:</label></td>
+                <td><input type="number" id="jumlah_anak" name="jumlah_anak"></td>
+            </tr>
+        </table>
+        <input type="button" value="Reservasi" onclick="tampilkanDataReservasi()">
+    </form>
+
+    <h2>Data Reservasi</h2>
+    <table id="data_reservasi">
+        <tr>
+            <th>Nama</th>
+            <th>Nomer Telpon</th>
+            <th>Alamat</th>
+            <th>Tanggal Check-In</th>
+            <th>Tanggal Check-Out</th>
+            <th>Jenis Kamar</th>
+            <th>Jumlah Tamu Dewasa</th>
+            <th>Jumlah Anak-anak</th>
+        </tr>
+    </table>
+
+    <script>
+        function tampilkanDataReservasi() {
+            // Mendapatkan nilai dari input formulir
+            const nama = document.getElementById("nama").value;
+            const nomerTelpon = document.getElementById("nomer_telpon").value;
+            const alamat = document.getElementById("alamat").value;
+            const checkIn = document.getElementById("check_in").value;
+            const checkOut = document.getElementById("check_out").value;
+            const jenisKamar = document.getElementById("jenis_kamar").value;
+            const jumlahDewasa = document.getElementById("jumlah_dewasa").value;
+            const jumlahAnak = document.getElementById("jumlah_anak").value;
+    
+            // Menambahkan data reservasi ke dalam tabel
+            const table = document.getElementById("data_reservasi");
+            const newRow = table.insertRow(-1);
+            const cells = [
+                newRow.insertCell(0),
+                newRow.insertCell(1),
+                newRow.insertCell(2),
+                newRow.insertCell(3),
+                newRow.insertCell(4),
+                newRow.insertCell(5),
+                newRow.insertCell(6),
+                newRow.insertCell(7),
+            ];
+    
+            cells[0].innerHTML = nama;
+            cells[1].innerHTML = nomerTelpon;
+            cells[2].innerHTML = alamat;
+            cells[3].innerHTML = checkIn;
+            cells[4].innerHTML = checkOut;
+            cells[5].innerHTML = jenisKamar;
+            cells[6].innerHTML = jumlahDewasa;
+            cells[7].innerHTML = jumlahAnak;
+    
+            // Reset formulir setelah menambahkan data
+            document.getElementById("reservasiForm").reset();
+        }
+    </script>
+</body>
+</html>
